@@ -8,7 +8,7 @@
     <meta content="" name="description" />
     <meta content="" name="author" />
     {{-- All css here --}}
-    @include('Backend.css links.style')
+    @include('Backend.style')
     <!-- END CORE CSS FRAMEWORK -->
   </head>
   <body class="">

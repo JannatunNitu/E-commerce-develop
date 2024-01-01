@@ -110,7 +110,7 @@
 <!-- Modal area start -->
 
 {{-- All js here --}}
-@include('Frontend.js links.script')
+@include('Frontend.script')
 
 <!-- Mirrored from themepresss.com/tf/html/tohoney/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 03:33:34 GMT -->
 </html>

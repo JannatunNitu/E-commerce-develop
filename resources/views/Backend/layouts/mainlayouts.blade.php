@@ -1,5 +1,5 @@
 {{-- Backend header starts here --}}
-@include('Backend.backendLayouts.header')
+@include('Backend.layouts.header')
 {{-- Backend header ends here --}}
 
 
@@ -8,5 +8,5 @@
 {{-- Maincontent ends here --}}
 
 {{-- Backend footer starts here --}}
-@include('Backend.backendLayouts.footer')
+@include('Backend.layouts.footer')
 {{-- Backend footer ends here --}}

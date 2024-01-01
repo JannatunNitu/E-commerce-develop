@@ -1,5 +1,5 @@
 {{-- Header section starts here --}}
-@include('Frontend.frontendLayouts.header')
+@include('Frontend.layouts.header')
 {{-- Header section ends here --}}
 
 
@@ -9,6 +9,6 @@
 
 
 {{-- Footer section starts here --}}
-@include('Frontend.frontendLayouts.footer')
+@include('Frontend.layouts.footer')
 {{-- Footer section ends here --}}
 

@@ -1,5 +1,5 @@
 {{-- Header & footer extends starts here --}}
-@extends('Backend.backendLayouts.mainlayouts')
+@extends('Backend.layouts.mainlayouts')
 {{-- Header & footer extends ends here --}}
 
 

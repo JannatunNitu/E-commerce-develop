@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('Frontend assets/assets/images/favicon.png') }}  ">
     <!-- Place favicon.ico in the root directory -->
     {{-- All css here --}}
-    @include('Frontend.css links.style')
+    @include('Frontend.style')
 </head>
 
 <body>

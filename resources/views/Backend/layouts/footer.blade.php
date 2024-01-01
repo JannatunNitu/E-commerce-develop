@@ -1,4 +1,4 @@
  {{-- all js here --}}
- @include('Backend.js links.script')
+ @include('Backend.script')
 </body>
 </html>
