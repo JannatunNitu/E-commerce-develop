@@ -108,34 +108,9 @@
     </div>
 </div>
 <!-- Modal area start -->
-<!-- jquery latest version -->
-<script src="{{ asset('Frontend assets/assets/js/vendor/jquery-2.2.4.min.js') }}"></script>
-<!-- bootstrap js -->
-<script src="{{ asset('Frontend assets/assets/js/bootstrap.min.js') }}"></script>
-<!-- owl.carousel.2.0.0-beta.2.4 css -->
-<script src="{{ asset('Frontend assets/assets/js/owl.carousel.min.js') }}"></script>
-<!-- scrollup.js -->
-<script src="{{ asset('Frontend assets/assets/js/scrollup.js') }}"></script>
-<!-- isotope.pkgd.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/isotope.pkgd.min.js') }}"></script>
-<!-- imagesloaded.pkgd.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/imagesloaded.pkgd.min.js') }}"></script>
-<!-- jquery.zoom.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/jquery.zoom.min.js') }}"></script>
-<!-- countdown.js -->
-<script src="{{ asset('Frontend assets/assets/js/countdown.js') }}"></script>
-<!-- swiper.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/swiper.min.js') }}"></script>
-<!-- metisMenu.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/metisMenu.min.js') }}"></script>
-<!-- mailchimp.js -->
-<script src="{{ asset('Frontend assets/assets/js/mailchimp.js') }}"></script>
-<!-- jquery-ui.min.js -->
-<script src="{{ asset('Frontend assets/assets/js/jquery-ui.min.js') }}"></script>
-<!-- main js -->
-<script src="{{ asset('Frontend assets/assets/js/scripts.js') }}"></script>
-</body>
 
+{{-- All js here --}}
+@include('Frontend.js links.script')
 
 <!-- Mirrored from themepresss.com/tf/html/tohoney/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2020 03:33:34 GMT -->
 </html>
