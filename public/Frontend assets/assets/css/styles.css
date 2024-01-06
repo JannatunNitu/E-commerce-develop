@@ -1384,9 +1384,9 @@ header-area start
     display: block;
     width: 100%;
 }
-{
+/* {
    width:58%;
-}
+} */
 .test-title h2{
     font-size: 48px;
     font-weight: 500;
@@ -2889,7 +2889,7 @@ checkout style here
 }
 
 .create-account p {
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .form-style label {
@@ -2898,9 +2898,6 @@ checkout style here
     cursor: pointer;
 }
 
-.create-account {
-    display: none;
-}
 
 .form-style input#toggle2 {
     top: 0;
@@ -3423,3 +3420,31 @@ ol {
     padding-bottom: 0;
 }
 /*mobal-subscribe*/
+
+
+/* Registration form css starts here */
+.register{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px 25px;
+    border-radius: 10px;
+}
+.login-group h4{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: -3px;
+}
+.login-group .top-para{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.side-logo{
+    margin-left: 107px;
+}
+.register-policy p{
+    color: rgb(52, 52, 52);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Registration form css ends here */

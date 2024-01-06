@@ -1,4 +1,5 @@
- {{-- all js here --}}
- @include('Backend.script')
+</div>
+</div>      
+@include('Frontend.script')
 </body>
 </html>

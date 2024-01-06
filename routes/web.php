@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function(){
     return view('Frontend.homepage.homepage');
 });
-Route::get('/backend',function(){
-    return view('Backend.backendhomepage');
+// Route::get('/backend',function(){
+//     return view('Backend.backendhomepage');
+// });
+
+
+Auth::routes();
+
+Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adminDashboard'])->name('adminDashboard');
+Route::get('/forgot',function(){
+    return view('auth.passwords.forgetPasseord');
 });
