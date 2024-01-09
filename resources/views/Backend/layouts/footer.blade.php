@@ -1,5 +1,5 @@
 </div>
 </div>      
-@include('Frontend.script')
+@include('Backend.script')
 </body>
 </html>

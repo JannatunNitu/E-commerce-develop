@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 Template Name: Rubick - HTML Admin Dashboard Template
@@ -23,6 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
     </head>
     <!-- END: Head -->
     <body class="main">
+
         <!-- BEGIN: Mobile Menu -->
         <div class="mobile-menu d-md-none">
             <div class="mobile-menu-bar">
@@ -1249,29 +1251,29 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!-- END: Search -->
-                    
+
                     <!-- BEGIN: Account Menu -->
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-pill overflow-hidden shadow-lg image-fit zoom-in" role="button" aria-expanded="false" data-bs-toggle="dropdown">
-                            <img alt="Rubick Tailwind HTML Admin Template" src="{{ asset('Backend assets/images/profile-2.jpg') }}">
+                            <img alt="Rubick Tailwind HTML Admin Template" src="{{auth()->user()->profile_img ? asset('storage/users/'.auth()->user()->profile_img) : env('DICEBARE_API').auth()->user()->name }}">
                         </div>
                         <div class="dropdown-menu w-56">
                             <ul class="dropdown-content bg-theme-26 dark-bg-dark-6 text-white">
                                 <li class="p-2">
-                                    <div class="fw-medium text-white">Robert De Niro</div>
-                                    <div class="fs-xs text-theme-28 mt-0.5 dark-text-gray-600">DevOps Engineer</div>
+                                    <div class="fw-medium text-white">nitu</div>
+                                    <div class="fs-xs text-theme-28 mt-0.5 dark-text-gray-600">nitu</div>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
                                 </li>
                                 <li>
-                                    <a href="index.html" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="user" class="w-4 h-4 me-2"></i> Profile </a>
+                                    <a href="{{ route('admin.show.profile') }}" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="user" class="w-4 h-4 me-2"></i> Profile </a>
                                 </li>
                                 <li>
                                     <a href="index.html" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="edit" class="w-4 h-4 me-2"></i> Add Account </a>
                                 </li>
                                 <li>
-                                    <a href="index.html" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="lock" class="w-4 h-4 me-2"></i> Reset Password </a>
+                                    <a href="{{ route('admin.show.password') }}" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="lock" class="w-4 h-4 me-2"></i> Reset Password </a>
                                 </li>
                                 <li>
                                     <a href="index.html" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="help-circle" class="w-4 h-4 me-2"></i> Help </a>
@@ -1280,7 +1282,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
                                 </li>
                                 <li>
-                                    <a href="index.html" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover"> <i data-feather="toggle-right" class="w-4 h-4 me-2"></i> Logout </a>
+                                    <a href="{{ route('logout') }}" class="dropdown-item text-white bg-theme-1-hover dark-bg-dark-3-hover" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"> <i data-feather="toggle-right" class="w-4 h-4 me-2"></i> Log Out </a>
+                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                          @csrf
+                                      </form>
                                 </li>
                             </ul>
                         </div>

@@ -57,7 +57,12 @@
                                     <li><a href="wishlist.html">wishlist</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ route('register') }}"> Login/Register </a></li>
+                            @guest
+                            <li><a href="{{ route('login') }}"> Login/Register </a></li>
+                            @endguest
+                            @auth
+                            <li><a href="{{ route('adminDashboard') }}"> {{ auth()->user()->name }} </a></li>
+                            @endauth
                         </ul>
                     </div>
                 </div>

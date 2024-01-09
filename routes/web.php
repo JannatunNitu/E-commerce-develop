@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AdminProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,10 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function(){
     return view('Frontend.homepage.homepage');
 });
-// Route::get('/backend',function(){
-//     return view('Backend.backendhomepage');
-// });
-
 
 Auth::routes();
 
@@ -28,3 +25,25 @@ Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'adm
 Route::get('/forgot',function(){
     return view('auth.passwords.forgetPasseord');
 });
+
+
+// ADMINPROFILECONTROLLER
+Route::prefix('/admin')->name('admin.')->controller(AdminProfileController::class)->group(
+       function(){
+        Route::get('/','ShowProfile')->name('show.profile');
+        Route::put('/UpdateProfile','UpdateProfile')->name('update.profile');
+        Route::put('/UpdateImage','UpdateProfileImage')->name('update.profile.image');
+        Route::get('/showPassword','ShowPassword')->name('show.password');
+        Route::put('/UpdatePassword','UpdatePassword')->name('update.password');
+       }
+);
+
+// Route::prefix('/Profile')->name('admin.')->controller(AdminProfileController::class)->group(
+//     function(){
+//         Route::get('/','ShowProfile')->name('profile');
+//         // Route::put('/Update','UpdateProfile')->name('profile.update');
+//         // Route::put('/Password/Update','UpdateAdminPassword')->name('profile.password.update');
+//     }
+// );
+
+// Route::put('/Update',[AdminProfileController::class,'UpdateProfile'])->name('profile.update');
