@@ -67,18 +67,6 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="">
                         <li>
-                            <a href="index.html" class="menu menu--active">
-                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="menu__title"> Side Menu </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="simple-menu-light-dashboard-overview-1.html" class="menu menu--active">
-                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="menu__title"> Simple Menu </div>
-                            </a>
-                        </li>
-                        <li>
                             <a href="top-menu-light-dashboard-overview-1.html" class="menu menu--active">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Top Menu </div>
@@ -568,37 +556,47 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="d-flex">
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
-                <a href="index.html" class="intro-x d-flex align-items-center ps-5 pt-4">
+                <a href="{{ route('adminDashboard') }}" class="intro-x d-flex align-items-center ps-5 pt-4">
                     <img style="" alt="Rubick Tailwind HTML Admin Template" class="w-6" src="{{ asset('Backend assets/images/logo.svg') }}">
                     <span class="d-none d-xl-block text-white fs-lg ms-3"> To<span class="fw-medium">honey</span> </span>
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="javascript:;" class="side-menu side-menu--active side-menu--open">
+                        <a href="{{ route('adminDashboard') }}" class="side-menu side-menu--active side-menu--open">
                             <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
+                                <div class="side-menu__sub-icon"> </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                            <div class="side-menu__title">
+                                Manage Categories
                                 <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
-                        <ul class="side-menu__sub-open">
+                        <ul class="">
+                    
                             <li>
-                                <a href="index.html" class="side-menu side-menu--active side-menu--open">
+                                <a href="{{ route('category.create') }}" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Overview 1 </div>
+                                    <div class="side-menu__title"> Create Category </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="side-menu-light-dashboard-overview-2.html" class="side-menu">
+                                <a href="{{ route('category.view') }}" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Overview 2 </div>
+                                    <div class="side-menu__title"> View Category </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="side-menu-light-dashboard-overview-3.html" class="side-menu">
+                                <a href="" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Overview 3 </div>
+                                    <div class="side-menu__title"> Edit Category </div>
                                 </a>
                             </li>
                         </ul>
@@ -607,27 +605,16 @@ License: You must have a valid license purchased only from themeforest(the above
                         <a href="javascript:;.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-feather="box"></i> </div>
                             <div class="side-menu__title">
-                                Menu Layout 
+                                Trash
                                 <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
                         <ul class="">
+                    
                             <li>
-                                <a href="index.html" class="side-menu">
+                                <a href="{{ route('category.allTrash') }}" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Side Menu </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Simple Menu </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="top-menu-light-dashboard-overview-1.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Top Menu </div>
+                                    <div class="side-menu__title"> Category </div>
                                 </a>
                             </li>
                         </ul>
@@ -1260,8 +1247,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="dropdown-menu w-56">
                             <ul class="dropdown-content bg-theme-26 dark-bg-dark-6 text-white">
                                 <li class="p-2">
-                                    <div class="fw-medium text-white">nitu</div>
-                                    <div class="fs-xs text-theme-28 mt-0.5 dark-text-gray-600">nitu</div>
+                                    <div class="fw-medium text-white">{{ auth()->user()->name }} </div>
+                                    <div class="fs-xs text-theme-28 mt-0.5 dark-text-gray-600">{{ auth()->user()->email }}</div>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider border-theme-27 dark-border-dark-3">
